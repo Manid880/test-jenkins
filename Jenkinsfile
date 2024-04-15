@@ -1,5 +1,3 @@
-// syntax 
-// Sample Pipeline
 pipeline {
     agent any
     stages {
@@ -21,6 +19,21 @@ pipeline {
         stage ('devdeploy') {
             steps {
                 echo "dev Pipleline"
+            }
+        }
+        stage ('testdeploy') {
+            steps {
+                echo "Test Pipleline"
+            }
+        }
+        stage ('stagedeploy') {
+            steps {
+                echo "stage Pipleline"
+            }
+        }
+        stage ('proddeploy') {
+            steps {
+                echo "Prod Pipleline"
             }
         }
     }
